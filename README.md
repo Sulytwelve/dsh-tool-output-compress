@@ -169,6 +169,7 @@ Three install paths, in preference order:
    configured, a tagged release publishes to the registry and installs as a normal package.
 2. **GitHub tag** — `dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#vX.Y.Z` (pin the tag).
 3. **Release tarball URL** — `dsh plugin --profile web add https://github.com/Sulytwelve/dsh-tool-output-compress/releases/download/vX.Y.Z/sulytwelve-dsh-tool-output-compress.tgz`.
+4. **codeload tarball** — when git fetches or GitHub release downloads are blocked, `dsh plugin --profile web add https://codeload.github.com/Sulytwelve/dsh-tool-output-compress/tar.gz/refs/tags/vX.Y.Z` installs the tagged tree directly (the spec shape already used for the context-manager on this host).
 
 **Upgrading:** DSH hot-updates code inside an installed plugin (HMR), but it does not overwrite an
 installed plugin package. A new version therefore needs remove then add (restart only if the Host
