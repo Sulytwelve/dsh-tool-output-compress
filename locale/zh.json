@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "工具输出压缩",
+    "description": "在长 shell 输出进入模型前做确定性压缩：保留错误、栈、时间线变化与行号引用，完整 stdout/stderr 落为可恢复工件。确定性、只读、默认静默。",
+    "detail": "docs/DETAIL.md"
+  }
+}

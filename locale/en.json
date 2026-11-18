@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Tool output compression",
+    "description": "Compresses long shell output before it reaches the model: keeps errors, stack traces, transitions and line references, and stores complete stdout/stderr as recoverable artifacts. Deterministic, read-only, silent by default.",
+    "detail": "docs/DETAIL.md"
+  }
+}

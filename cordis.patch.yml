@@ -1,0 +1,15 @@
+# Tool output compression — deterministic summaries for long shell output.
+#
+# Registered as a normal `tools/post-execute` listener: the shipped
+# spill-policy row (`prepend: true`) sees this plugin's short result and no
+# longer needs to retain it. Defaults are calibrate-required; see README.md.
+- insert:
+    - id: tool-output-compress
+      name: '@sulytwelve/dsh-tool-output-compress'
+      config:
+        enabled: true
+        tools: ['bash']
+        thresholdBytes: 16384
+        targetBytes: 2048
+        retentionDays: 7
+        quotaBytes: 268435456

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Tool output compression">
+  <rect x="4" y="8" width="56" height="42" rx="6" fill="#1f2937"/>
+  <rect x="8" y="12" width="48" height="34" rx="3" fill="#111827"/>
+  <path d="M12 20h20M12 26h28M12 32h14" fill="none" stroke="#93c5fd" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M40 24l8 6-8 6" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 38h34" fill="none" stroke="#f87171" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="24" y="53" width="16" height="4" rx="2" fill="#1f2937"/>
+  <rect x="18" y="57" width="28" height="3" rx="1.5" fill="#1f2937"/>
+</svg>
