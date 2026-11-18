@@ -54,7 +54,9 @@ budget and storage failures.
 ## Upgrade
 
 ```sh
-dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.x.y
+# DSH has no in-place update: remove, add the new tag, then restart.
+dsh plugin --profile web remove @sulytwelve/dsh-tool-output-compress
+dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.1.2
 # restart the DSH process that serves the profile
 ```
 
