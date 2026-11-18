@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.2 — 2026-11-18
+
+Distribution only; no runtime behavior change.
+
+### Added
+
+- A tag-triggered npm publish workflow (`.github/workflows/publish.yml`, `NPM_TOKEN` secret) so a
+  tagged release can be published with provenance instead of being installed only from a GitHub tag.
+
 ## 0.1.1 — 2026-11-18
 
 Repository hygiene only; no runtime behavior change.

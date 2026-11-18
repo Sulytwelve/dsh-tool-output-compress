@@ -104,6 +104,6 @@ test('doctor and version run without a loaded host', () => {
   assert.match(doctor.stdout, /host hook: no plugin-loaded\.json/)
   const version = run(['version'], stateDir)
   assert.equal(version.status, 0)
-  assert.match(version.stdout, /dsh-tool-output-compress 0\.1\.1/)
+  assert.match(version.stdout, /dsh-tool-output-compress 0\.1\.2/)
   fs.rmSync(stateDir, { recursive: true, force: true })
 })

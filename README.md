@@ -51,7 +51,7 @@ the fallback retention path. The two systems do not share storage.
 ## Install
 
 ```sh
-dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.1.1
+dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.1.2
 ```
 
 Restart the DSH process that serves the profile so it loads the new JavaScript. DSH's CLI does not
@@ -137,7 +137,7 @@ GC/pin, and the guarantee that the hook path spawns no process and adds no tool.
 Clean install used on the target host:
 
 ```sh
-mkdir /tmp/dsh-t3 && tar -xzf sulytwelve-dsh-tool-output-compress-0.1.1.tgz -C /tmp/dsh-t3
+mkdir /tmp/dsh-t3 && tar -xzf sulytwelve-dsh-tool-output-compress-0.1.2.tgz -C /tmp/dsh-t3
 cd /tmp/dsh-t3/package && node test/*.mjs
 ```
 
@@ -161,6 +161,17 @@ dsh plugin --profile web remove @sulytwelve/dsh-tool-output-compress
 Artifacts live under `~/.local/state/dsh-tool-output-compress/`; remove that directory to discard
 them. No other plugin's data is touched.
 
+## Distribution
+
+Three install paths, in preference order:
+
+1. **npm** — the repository carries a tag-triggered publish workflow; once the `NPM_TOKEN` secret is
+   configured, a tagged release publishes to the registry and installs as a normal package.
+2. **GitHub tag** — `dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#vX.Y.Z` (pin the tag).
+3. **Release tarball URL** — `dsh plugin --profile web add https://github.com/Sulytwelve/dsh-tool-output-compress/releases/download/vX.Y.Z/sulytwelve-dsh-tool-output-compress.tgz`.
+
+Until npm publishing is enabled, upgrade with a new pinned tag; the installed Host process still
+needs the usual restart to load new JavaScript.
 ## License
 
 MIT — see [LICENSE](LICENSE).
