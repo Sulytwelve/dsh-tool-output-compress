@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1 — 2026-11-18
+
+Repository hygiene only; no runtime behavior change.
+
+### Fixed
+
+- Removed a benchmark shell script that was accidentally committed as `.tmp-bench.sh`, and ignored
+  `.tmp-*` going forward. The npm package never included it (the `files` allowlist is unchanged).
+
 ## 0.1.0 — 2026-11-18
 
 First release. Deterministic compression of long `bash` output for DSH 0.2.2-rc.3, profile `web`.

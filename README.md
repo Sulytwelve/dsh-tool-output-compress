@@ -51,7 +51,7 @@ the fallback retention path. The two systems do not share storage.
 ## Install
 
 ```sh
-dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.1.0
+dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.1.1
 ```
 
 Restart the DSH process that serves the profile so it loads the new JavaScript. DSH's CLI does not
@@ -137,7 +137,7 @@ GC/pin, and the guarantee that the hook path spawns no process and adds no tool.
 Clean install used on the target host:
 
 ```sh
-mkdir /tmp/dsh-t3 && tar -xzf sulytwelve-dsh-tool-output-compress-0.1.0.tgz -C /tmp/dsh-t3
+mkdir /tmp/dsh-t3 && tar -xzf sulytwelve-dsh-tool-output-compress-0.1.1.tgz -C /tmp/dsh-t3
 cd /tmp/dsh-t3/package && node test/*.mjs
 ```
 

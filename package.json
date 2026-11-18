@@ -1,6 +1,6 @@
 {
   "name": "@sulytwelve/dsh-tool-output-compress",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Deterministic compression of long shell tool output for DeepSeek Harness: keep errors, stacks, transitions and line references, store complete stdout/stderr as recoverable artifacts.",
   "keywords": [
     "dsh",
