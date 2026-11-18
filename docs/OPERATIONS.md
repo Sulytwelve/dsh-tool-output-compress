@@ -54,10 +54,10 @@ budget and storage failures.
 ## Upgrade
 
 ```sh
-# DSH has no in-place update: remove, add the new tag, then restart.
+# HMR hot-updates code inside an installed plugin, but DSH does not overwrite an installed package:
 dsh plugin --profile web remove @sulytwelve/dsh-tool-output-compress
 dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#v0.1.2
-# restart the DSH process that serves the profile
+# restart the DSH process that serves the profile if the new module generation is not hot-loaded
 ```
 
 Existing artifacts are not migrated; summaries carry `rule v1` and the manifest records the rule
@@ -67,7 +67,7 @@ version, so mixed versions stay distinguishable.
 
 ```sh
 dsh plugin --profile web remove @sulytwelve/dsh-tool-output-compress
-# restart the DSH process that serves the profile
+# restart the DSH process that serves the profile if the new module generation is not hot-loaded
 rm -rf ~/.local/state/dsh-tool-output-compress   # optional: discard artifacts
 ```
 

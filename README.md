@@ -170,7 +170,9 @@ Three install paths, in preference order:
 2. **GitHub tag** — `dsh plugin --profile web add github:Sulytwelve/dsh-tool-output-compress#vX.Y.Z` (pin the tag).
 3. **Release tarball URL** — `dsh plugin --profile web add https://github.com/Sulytwelve/dsh-tool-output-compress/releases/download/vX.Y.Z/sulytwelve-dsh-tool-output-compress.tgz`.
 
-**Upgrading:** DSH currently has no in-place update operation. Remove the bundle, add the new pinned
+**Upgrading:** DSH hot-updates code inside an installed plugin (HMR), but it does not overwrite an
+installed plugin package. A new version therefore needs remove then add (restart only if the Host
+does not hot-load the new module generation):
 tag, then restart the process that serves the profile:
 
 ```sh
